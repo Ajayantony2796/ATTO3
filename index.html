@@ -24,7 +24,7 @@
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
-      position: relative; /* Added for positioning the color picker absolutely */
+      position: relative; /* Position relative to anchor the absolute element */
     }
     
     /* Responsive car image that scales with the container */
@@ -35,10 +35,10 @@
       display: block;
     }
     
-    /* Color picker positioned over the image */
+    /* Color picker positioned below the image */
     .color-picker {
       position: absolute;
-      bottom: 10px;       /* Adjust if needed for closer or further placement */
+      bottom: -60px;       /* Increased space: moved further below the image */
       left: 50%;
       transform: translateX(-50%);
     }
@@ -84,7 +84,7 @@
     <!-- Car image -->
     <img id="car-image" src="quartz-blue.webp" alt="Car Color Preview">
     
-    <!-- Color picker positioned over the image -->
+    <!-- Color picker positioned below the image -->
     <div class="color-picker">
       <button class="color-button" style="background: #56859e" 
               onclick="changeColor('quartz-blue')" 
