@@ -24,6 +24,7 @@
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
+      position: relative; /* Added for positioning the color picker absolutely */
     }
     
     /* Responsive car image that scales with the container */
@@ -34,10 +35,12 @@
       display: block;
     }
     
-    /* Color picker is now placed below the image with a top margin */
+    /* Color picker positioned over the image */
     .color-picker {
-      margin-top: 40px;  /* Increase this value to create more space between the image and picker */
-      text-align: center;
+      position: absolute;
+      bottom: 10px;       /* Adjust if needed for closer or further placement */
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     /* Color buttons for a sleek look */
@@ -81,18 +84,18 @@
     <!-- Car image -->
     <img id="car-image" src="quartz-blue.webp" alt="Car Color Preview">
     
-    <!-- Color picker placed below the image -->
+    <!-- Color picker positioned over the image -->
     <div class="color-picker">
       <button class="color-button" style="background: #56859e" 
               onclick="changeColor('quartz-blue')" 
               title="Quartz Blue"></button>
-      <button class="color-button" style="background:  #808080" 
+      <button class="color-button" style="background: #808080" 
               onclick="changeColor('harbour-grey')" 
               title="Harbour Grey"></button>
       <button class="color-button" style="background: #000000" 
               onclick="changeColor('cosmos-black')" 
               title="Cosmos Black"></button>
-      <button class="color-button" style="background:  #FFFF" 
+      <button class="color-button" style="background: #FFFF" 
               onclick="changeColor('crystal-white')" 
               title="Crystal White"></button>
     </div>
